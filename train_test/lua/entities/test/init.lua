@@ -6,8 +6,8 @@ include('shared.lua')
 function ENT:Initialize()
 	local model = ( "models/props/de_train/flatcar.mdl" )
 	self:SetModel( model )
-	self:PhysicsInit( SOLID_PUSH )      -- Make us work with physics,
-	self:SetMoveType( MOVETYPE_VPHYSICS )   -- after all, gmod is a physics
+	self:PhysicsInit( SOLID_VPHYSICS )      -- Make us work with physics,
+	self:SetMoveType( MOVETYPE_PUSH )   -- after all, gmod is a physics
 	self:SetSolid( SOLID_VPHYSICS )         -- Toolbox
 	self:SetGravity(0)
         local phys = self:GetPhysicsObject()
