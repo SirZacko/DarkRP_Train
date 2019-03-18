@@ -6,7 +6,7 @@ include('shared.lua')
 function ENT:Initialize()
 	local model = ( "models/props/de_train/flatcar.mdl" )
 	self:SetModel( model )
-	self:PhysicsInit( SOLID_VPHYSICS )      -- Make us work with physics,
+	self:PhysicsInit( SOLID_PUSH )      -- Make us work with physics,
 	self:SetMoveType( MOVETYPE_VPHYSICS )   -- after all, gmod is a physics
 	self:SetSolid( SOLID_VPHYSICS )         -- Toolbox
 	self:SetGravity(0)
@@ -15,7 +15,6 @@ function ENT:Initialize()
 		phys:Wake()
 		phys:SetMass(50000)
 	end
-	self:SetMoveType(4) --PUSH movetype, should move through world
 	self.ships = {}
 	self.startingPos = Vector(1087.253296, -2044.023193, -166.758865)+Vector(0,0,-35)--self:GetPos()
 	self.travelDir = Vector(0,1,0)--self:GetRight()
