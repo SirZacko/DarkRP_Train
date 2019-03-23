@@ -215,9 +215,6 @@ function IsOnTop(ent1, ent2)
 end
 
 function ENT:StartTouch( impact )
-	--RunConsoleCommand("say", "OUCH, MY PEE PEE!")
-	--determine if this was a forward impact
-	--print("Touch Start")
 	if IsInFront(self, impact) then
 		if impact:IsPlayer() then
 			--impact:Kill()
